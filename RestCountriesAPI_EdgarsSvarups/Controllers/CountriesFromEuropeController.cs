@@ -1,49 +1,40 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RestCountriesAPI_EdgarsSvarups.Interfaces;
 using RestCountriesAPI_EdgarsSvarups.Methods;
-using RestCountriesAPI_EdgarsSvarups.Models;
 
-namespace RestCountriesAPI_EdgarsSvarups.Controllers
+namespace RestCountriesAPI_EdgarsSvarups.Controllers;
+
+public class CountriesController : ControllerBase
 {
-    public class CountriesController : ControllerBase
+    public ICountryService _countryService;
+
+    public CountriesController(ICountryService countryService)
     {
-        public static ICountry _countries;
-        
-        public CountriesController(ICountry countries)
-        {
-            _countries = countries;
-        }
+        _countryService = countryService;
+    }
 
-        public class AllEuCountries
-        {
-            public static Task<List<CountryModel>> ReturnAllEuropeanCountries = _countries.GetCountries();
-        }
+    [HttpGet("countries/{name}")]
+    public async Task<IActionResult> ReturnCountryWithMatchingName(string name)
+    {
+        var europeanCountryWithoutName = await _countryService.ReturnCountryWithoutName(name);
 
+        if (europeanCountryWithoutName == null) throw new ArgumentNullException(nameof(europeanCountryWithoutName));
 
+        if (_countryService.IsEuropeanCountry(await _countryService.AllEuropeanCountries(), europeanCountryWithoutName))
+            return Ok(europeanCountryWithoutName);
 
-        [HttpGet("countries/{name}")]
-        public async Task<IActionResult> ReturnCountryWithMatchingName(string name)
-        {
-            var europeanCountryWithoutName = await CountryService.ReturnCountryWithoutName(name);
+        return BadRequest();
+    }
 
-            if (europeanCountryWithoutName == null) throw new ArgumentNullException(nameof(europeanCountryWithoutName));
+    [HttpGet("/Countries/TopTenByPopulation")]
+    public async Task<IActionResult> ReturnTopTenEuropeanCountriesByPopulation()
+    {
+        return Ok((await _countryService.SortEuropeanCountriesByPopulation()).Take(10));
+    }
 
-            if (CountryService.IsEuropeanCountry(await AllEuCountries.ReturnAllEuropeanCountries, europeanCountryWithoutName))
-                return Ok(europeanCountryWithoutName);
-
-            return BadRequest();
-        }
-
-        [HttpGet("/Countries/TopTenByPopulation")]
-        public async Task<IActionResult> ReturnTopTenEuropeanCountriesByPopulation()
-        {
-            return Ok(CountryService.SortEuropeanCountriesByPopulation(await AllEuCountries.ReturnAllEuropeanCountries).Take(10));
-        }
-
-        [HttpGet("/Countries/TopTenByDensity")]
-        public async Task<IActionResult> ReturnTopTenEuropeanCountriesByDensity()
-        {
-            return Ok(CountryService.SortEuropeanCountriesByDensity(await AllEuCountries.ReturnAllEuropeanCountries).Take(10));
-        }
+    [HttpGet("/Countries/TopTenByDensity")]
+    public async Task<IActionResult> ReturnTopTenEuropeanCountriesByDensity()
+    {
+        return Ok((await _countryService.SortEuropeanCountriesByDensity()).Take(10));
     }
 }
