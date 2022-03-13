@@ -1,41 +1,41 @@
-﻿using Refit;
-using RestCountriesAPI_EdgarsSvarups.Interfaces;
+﻿using RestCountriesAPI_EdgarsSvarups.Interfaces;
 using RestCountriesAPI_EdgarsSvarups.Models;
 
 namespace RestCountriesAPI_EdgarsSvarups.Methods;
 
 public class CountryService : ICountryService
 {
-    private readonly ICountry _countryService;
+    public readonly ICountry _countryService;
 
-    public CountryService(ICountry country)
+    public CountryService(ICountry countryService)
     {
-        _countryService = country;
+        _countryService = countryService;
     }
 
-    public async Task<List<CountryModel>> AllEuropeanCountries() 
+    public async Task<List<CountryModel>> AllCountries() 
     {
         return await _countryService.GetCountries();
     }
 
     public async Task<IEnumerable<CountryModel>> ReturnEuropeUnionCountries()
     {
-        var countries = await AllEuropeanCountries();
+        var countries = await AllCountries();
 
         return countries.Where(countryModel => countryModel.Independent).ToList();
     }
-
-    public bool IsEuropeanCountry(List<CountryModel> europeUnionCountries, SingleCountryModel country)
+    public async Task<bool> IsEuropeanCountry(string name)
     {
-        return europeUnionCountries.Any(countryModel => countryModel.NativeName == country.NativeName);
-    }
+        var europeUnionCountries = await ReturnEuropeUnionCountries();
 
+        return europeUnionCountries.Any(c => c.Name.ToString().ToLower() == name.ToLower());
+    }
+    
     public async Task<SingleCountryModel?> ReturnCountryWithoutName(string name)
     {
         var listOfCountries = await _countryService.GetCountryByName(name);
-
-        var countryWithoutName = listOfCountries.Select(countryModel =>
-            new SingleCountryModel
+        
+        var countryWithoutName = listOfCountries
+            .Select(countryModel => new SingleCountryModel
             {
                 Area = countryModel.Area,
                 Population = countryModel.Population,

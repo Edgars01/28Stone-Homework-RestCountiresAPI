@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RestCountriesAPI_EdgarsSvarups.Interfaces;
-using RestCountriesAPI_EdgarsSvarups.Methods;
 
 namespace RestCountriesAPI_EdgarsSvarups.Controllers;
 
@@ -16,14 +15,9 @@ public class CountriesController : ControllerBase
     [HttpGet("countries/{name}")]
     public async Task<IActionResult> ReturnCountryWithMatchingName(string name)
     {
-        var europeanCountryWithoutName = await _countryService.ReturnCountryWithoutName(name);
+        if (await _countryService.IsEuropeanCountry(name) == false) return BadRequest("Only European countries");
 
-        if (europeanCountryWithoutName == null) throw new ArgumentNullException(nameof(europeanCountryWithoutName));
-
-        if (_countryService.IsEuropeanCountry(await _countryService.AllEuropeanCountries(), europeanCountryWithoutName))
-            return Ok(europeanCountryWithoutName);
-
-        return BadRequest();
+        return Ok(await _countryService.ReturnCountryWithoutName(name));
     }
 
     [HttpGet("/Countries/TopTenByPopulation")]

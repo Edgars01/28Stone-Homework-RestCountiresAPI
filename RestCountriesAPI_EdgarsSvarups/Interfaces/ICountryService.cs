@@ -4,11 +4,11 @@ namespace RestCountriesAPI_EdgarsSvarups.Interfaces;
 
 public interface ICountryService
 {
-    Task<List<CountryModel>> AllEuropeanCountries();
+    Task<List<CountryModel>> AllCountries();
 
     Task<IEnumerable<CountryModel>> ReturnEuropeUnionCountries();
 
-    bool IsEuropeanCountry(List<CountryModel> europeUnionCountries, SingleCountryModel country);
+    Task<bool> IsEuropeanCountry(string country);
 
     Task<SingleCountryModel?> ReturnCountryWithoutName(string name);
 
