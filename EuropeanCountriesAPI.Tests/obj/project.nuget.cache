@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FA6kJk68H0Zh5N9cIH54+GDWSTrvHCTWxBkxUTAITabRer10Au8ETz5zaamVBwWwHOMmz13GBVxl1BE5Ojmr6Q==",
+  "dgSpecHash": "MJN8WRWRYYyJfAScWZz/PzsCBZ/MwBNIw7hluYv7oNNDKaV7dT5r9FGQdmm/BejwT8eloUeBepItL3SflDW79A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gbhui\\Desktop\\stone28\\GITHUB\\28Stone-Homework-RestCountiresAPI\\EuropeanCountriesAPI.Tests\\EuropeanCountriesAPI.Tests.csproj",
+  "projectFilePath": "C:\\Users\\gbhui\\Desktop\\28Stone-Homework-RestCountiresAPI\\28Stone-Homework-RestCountiresAPI\\EuropeanCountriesAPI.Tests\\EuropeanCountriesAPI.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gbhui\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\gbhui\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",

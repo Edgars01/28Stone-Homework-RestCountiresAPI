@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WXjyoS8YCGblAKtCIz6idgEPr9JODHJgbnp7EkwzUpoG/PPR4evb5M5OJ311M9dtVYoMSQsfECfc9lXY4lB1Yw==",
+  "dgSpecHash": "iJpwWOgxlQw8RZ2H8RsWKeXUM2iIDbVB6vqKJuCzE94/kqyh3RKR/iDlTfl2UJoZLfA2KRRoOirT4qd4cqZPOw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gbhui\\Desktop\\stone28\\GITHUB\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\RestCountriesAPI_EdgarsSvarups.csproj",
+  "projectFilePath": "C:\\Users\\gbhui\\Desktop\\28Stone-Homework-RestCountiresAPI\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\RestCountriesAPI_EdgarsSvarups.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gbhui\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\gbhui\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
