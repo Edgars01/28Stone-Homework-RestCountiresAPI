@@ -1,8 +1,8 @@
 # 28Stone-Homework-RestCountiresAPI
 
 
-<h3> In response of </h3>
-<h2> Task: </h2>
+<h4> In response of </h4>
+<h3> Task: </h3>
 
 1. Create a WebApi .NET 6 application that consumes data from
 https://restcountries.com/ API v3+ <br />
@@ -22,7 +22,7 @@ have on that country in your model except the country name <br />
 
 
 
-<h3> How to run </h3>
+<h4> How to run </h4>
 - Clone repository <br />
 - Open In VisualStudio <br />
 - Run RestCountriesAPI_EdgarsSvarups
