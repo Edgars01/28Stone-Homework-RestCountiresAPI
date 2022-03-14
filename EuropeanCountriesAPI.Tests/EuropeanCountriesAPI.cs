@@ -144,7 +144,7 @@ public class CountryServicesTests
     }
 
     [Fact]
-    public async Task IsEuropeanCountryName_CountryOutsideEurope_ShouldBeFalse()
+    public async Task IsEuropeanCountry_CountryOutsideEurope_ShouldBeFalse()
     {
         // Arrange   
         var countryName = "error";

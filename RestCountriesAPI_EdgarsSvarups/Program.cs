@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddRefitClient<ICountry>().ConfigureHttpClient(httpClient => httpClient.BaseAddress = new Uri("https://restcountries.com/v2/"));
+builder.Services.AddRefitClient<ICountry>().ConfigureHttpClient(httpClient => httpClient.BaseAddress = new Uri("https://restcountries.com/v2/")); // take from configuration ---- stackoverflow.com/questions/46940710/getting-value-from-appsettings-json-in-net-core
 builder.Services.AddTransient<ICountryService, CountryService>();
 
 var app = builder.Build();

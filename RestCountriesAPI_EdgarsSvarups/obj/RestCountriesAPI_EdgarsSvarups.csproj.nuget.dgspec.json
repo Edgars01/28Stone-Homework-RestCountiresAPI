@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gbhui\\Desktop\\28Stone-Homework-RestCountiresAPI\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\RestCountriesAPI_EdgarsSvarups.csproj": {}
+    "C:\\Users\\gbhui\\Desktop\\stone28\\GITHUB\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\RestCountriesAPI_EdgarsSvarups.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gbhui\\Desktop\\28Stone-Homework-RestCountiresAPI\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\RestCountriesAPI_EdgarsSvarups.csproj": {
+    "C:\\Users\\gbhui\\Desktop\\stone28\\GITHUB\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\RestCountriesAPI_EdgarsSvarups.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gbhui\\Desktop\\28Stone-Homework-RestCountiresAPI\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\RestCountriesAPI_EdgarsSvarups.csproj",
+        "projectUniqueName": "C:\\Users\\gbhui\\Desktop\\stone28\\GITHUB\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\RestCountriesAPI_EdgarsSvarups.csproj",
         "projectName": "RestCountriesAPI_EdgarsSvarups",
-        "projectPath": "C:\\Users\\gbhui\\Desktop\\28Stone-Homework-RestCountiresAPI\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\RestCountriesAPI_EdgarsSvarups.csproj",
+        "projectPath": "C:\\Users\\gbhui\\Desktop\\stone28\\GITHUB\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\RestCountriesAPI_EdgarsSvarups.csproj",
         "packagesPath": "C:\\Users\\gbhui\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gbhui\\Desktop\\28Stone-Homework-RestCountiresAPI\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\obj\\",
+        "outputPath": "C:\\Users\\gbhui\\Desktop\\stone28\\GITHUB\\28Stone-Homework-RestCountiresAPI\\RestCountriesAPI_EdgarsSvarups\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
